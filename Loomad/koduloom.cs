@@ -4,8 +4,7 @@
     {
         public string nimi;
         public string varv;
-        //public char sugu;
-        public enum sugu { isane, emane };
+        public enum sugu { mees, naine };
         public sugu loomaSugu;
         public double kaal;
         public int vanus;

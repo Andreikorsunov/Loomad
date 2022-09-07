@@ -2,28 +2,27 @@
 
 namespace Loomad
 {
-    internal class Koer : koduloom
+    internal class Karu : koduloom
     {
-        public enum toug { Alabai, Mops, Haski };
+        public enum toug { Pruunkaru, Grizzly, PrillidegaKaru };
         public toug Toug;
-        //Tõung - порода
-        public Koer(toug Toug, string nimi, string varv, sugu loomaSugu, double kaal, int vanus, bool elav) : base(nimi, varv, loomaSugu, kaal, vanus, elav)
+        public Karu(toug Toug, string nimi, string varv, sugu loomaSugu, double kaal, int vanus, bool elav) : base(nimi, varv, loomaSugu, kaal, vanus, elav)
         {
             this.Toug = Toug;
         }
-        public Koer(Koer koer)
+        public Karu(Karu karu)
         {
-            this.nimi = koer.nimi;
-            this.varv = koer.varv;
-            this.loomaSugu = koer.loomaSugu;
-            this.kaal = koer.kaal;
-            this.vanus = koer.vanus;
-            this.elav = koer.elav;
-            this.Toug = koer.Toug;
+            this.nimi = karu.nimi;
+            this.varv = karu.varv;
+            this.loomaSugu = karu.loomaSugu;
+            this.kaal = karu.kaal;
+            this.vanus = karu.vanus;
+            this.elav = karu.elav;
+            this.Toug = karu.Toug;
         }
         public override void print_Haal()
         {
-            Console.WriteLine("Af");
+            Console.WriteLine("RRRRRRRRR");
         }
         public override void print_Info()
         {
@@ -35,6 +34,6 @@ namespace Loomad
         public void muudaKaal(double uusKaal) { kaal = uusKaal; }
         public void muudaVanus(int uusVanus) { vanus = uusVanus; }
         public void muudaElav(bool uusElav) { elav = uusElav; }
-        public void muudaToug1(toug uusToug) { Toug = uusToug; }
+        public void muudaToug(toug uusToug) { Toug = uusToug; }
     }
 }
