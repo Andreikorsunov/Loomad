@@ -4,12 +4,12 @@ namespace Loomad
 {
     internal class Koer : koduloom
     {
-        public enum toug { Mops, Buldog, Pudel, Haski, Jorkširi_terjer };
-        public toug toug1;
+        public enum toug { Mops, Buldog, Haski };
+        public toug Toug;
         //Tõung - порода
-        public Koer(toug toug1, string nimi, string varv, sugu loomaSugu, double kaal, int vanus, bool elav) : base(nimi, varv, loomaSugu, kaal, vanus, elav)
+        public Koer(toug Toug, string nimi, string varv, sugu loomaSugu, double kaal, int vanus, bool elav) : base(nimi, varv, loomaSugu, kaal, vanus, elav)
         {
-            this.toug1 = toug1;
+            this.Toug = Toug;
         }
         public Koer(Koer koer)//Kloonimiseks
         {
@@ -19,7 +19,7 @@ namespace Loomad
             this.kaal = koer.kaal;
             this.vanus = koer.vanus;
             this.elav = koer.elav;
-            this.toug1 = koer.toug1;
+            this.Toug = koer.Toug;
         }
         public override void print_Haal()
         {
@@ -27,7 +27,7 @@ namespace Loomad
         }
         public override void print_Info()
         {
-            Console.WriteLine($"{toug1}, {varv}, {nimi} ta on {loomaSugu} ja tema kaal on {kaal} ja ta on {vanus} aastat vana");
+            Console.WriteLine($"{Toug}, {varv}, {nimi} ta on {loomaSugu} ja tema kaal on {kaal} ja ta on {vanus} aastat vana");
         }
         public void muudaNimi(string uusNimi) { nimi = uusNimi; }
         public void muudaVarv(string uusVarv) { varv = uusVarv; }
@@ -35,6 +35,6 @@ namespace Loomad
         public void muudaKaal(double uusKaal) { kaal = uusKaal; }
         public void muudaVanus(int uusVanus) { vanus = uusVanus; }
         public void muudaElav(bool uusElav) { elav = uusElav; }
-        public void muudaToug1(toug uusToug1) { toug1 = uusToug1; }
+        public void muudaToug1(toug uusToug) { Toug = uusToug; }
     }
 }
