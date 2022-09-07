@@ -22,11 +22,13 @@ namespace Loomad
         }
         public override void print_Haal()
         {
-            Console.WriteLine("Af");
+            Console.WriteLine("Af, Af, Af");
         }
-        public override void print_Info()
+        public override string print_Info()
         {
+            string text = $"{Toug}, {varv}, {nimi} ta on {loomaSugu} ja tema kaal on {kaal} ja ta on {vanus} aastat vana";
             Console.WriteLine($"{Toug}, {varv}, {nimi} ta on {loomaSugu} ja tema kaal on {kaal} ja ta on {vanus} aastat vana");
+            return text;
         }
         public void muudaNimi(string uusNimi) { nimi = uusNimi; }
         public void muudaVarv(string uusVarv) { varv = uusVarv; }
