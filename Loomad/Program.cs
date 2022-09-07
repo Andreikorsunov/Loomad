@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-Console.WriteLine("Hello, World!");
-Koer koer = new Koer(Koer.toug.Mops, "Šarik", "punane", koduloom.sugu.mees, 35.5, 7);
+Console.WriteLine("Hello, ZORA!");
+Koer koer = new Koer(Koer.toug.Mops, "Zora", "pruuni", koduloom.sugu.mees, 25.5, 7);
 koer.print_Info();
 koer.print_Haal();
 Koer veelkoer = new Koer(koer);

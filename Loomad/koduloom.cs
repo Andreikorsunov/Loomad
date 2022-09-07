@@ -17,7 +17,7 @@
             this.kaal = kaal;
             this.vanus = vanus;
         }
-        public abstract void print_Info();
+        public abstract string print_Info();
         public abstract void print_Haal();
     }
 }
