@@ -13,12 +13,12 @@ namespace Loomad
         }
         public Koer(Koer koer)
         {
+            this.Toug = koer.Toug;
             this.nimi = koer.nimi;
             this.varv = koer.varv;
             this.loomaSugu = koer.loomaSugu;
             this.kaal = koer.kaal;
             this.vanus = koer.vanus;
-            this.Toug = koer.Toug;
         }
         public override void print_Haal()
         {

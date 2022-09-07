@@ -26,15 +26,14 @@ List<koduloom> karuList = new List<koduloom>();
 karuList.Add(Lena);
 karuList.Add(Maks);
 karuList.Add(Aleksei);
-
-using (StreamWriter writer = new StreamWriter(@"..\..\..\file.txt"))
-{
-    foreach (koduloom x in karuList)
-    {
-        writer.WriteLine(x.nimi + "," + x.vanus + ",");
-    }
-}
 Console.WriteLine("\n");
+
+StreamWriter sw = new StreamWriter(@"..\..\..\file.txt", false);
+foreach (koduloom x in karuList)
+{
+    sw.WriteLine(x.nimi + "," + x.varv);
+}
+sw.Close();
 List<Karu> karud = new List<Karu>();
 StreamReader sr = new StreamReader(@"..\..\..\file.txt");
 string text;
@@ -46,6 +45,7 @@ while ((text = sr.ReadLine()) != null)
 sr.Close();
 foreach (var item in karud)
 {
-    Console.WriteLine($"Nimi: {item.nimi}, Vanus: {item.vanus}");
+    //Console.WriteLine($"Nimi: {item.nimi}, Värv: {item.varv}, Sugu: {item.loomaSugu}, Kaal: {item.kaal}, Vanus: {item.vanus}");
+    Console.WriteLine(item.nimi + " " + item.varv);
 }
 Console.ReadLine();

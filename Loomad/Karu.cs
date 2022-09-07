@@ -10,15 +10,21 @@ namespace Loomad
         {
             this.Toug = Toug;
         }
+        public Karu(string nimi, string varv)
+        {
+            this.nimi = nimi;
+            this.varv = varv;
+        }
         public Karu(Karu karu)
         {
+            this.Toug = karu.Toug;
             this.nimi = karu.nimi;
             this.varv = karu.varv;
             this.loomaSugu = karu.loomaSugu;
             this.kaal = karu.kaal;
             this.vanus = karu.vanus;
-            this.Toug = karu.Toug;
         }
+        
         public override void print_Haal()
         {
             Console.WriteLine("RRRRRRRRR");
